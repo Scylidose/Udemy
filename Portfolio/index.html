@@ -1,0 +1,431 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>CV</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+
+  <!-- Lato Google font -->
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+
+  <!-- Link to Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- Link to CSS and JS file -->
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/script.js"></script>
+
+  <style>
+    @media screen and (max-width: 1151px) {
+      #wrapper {
+        display: none;
+      }
+    }
+
+    svg {
+      margin-right: 11px;
+    }
+
+    #controle,
+    #progression,
+    #control-volume {
+      position: relative;
+      display: inline-block;
+    }
+
+    #wrapper {
+      position: absolute;
+      margin: 8px;
+    }
+  </style>
+  <link rel="stylesheet" href="css/controle.css">
+  <link rel="stylesheet" href="css/progression.css">
+  <link rel="stylesheet" href="css/volume.css">
+  <script>
+    $(document).ready(function () {
+      $("#vol-control").hide();
+    });
+  </script>
+
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <!-- Brand -->
+    <a class="navbar-brand" href="#">Curriculum Vitæ</a>
+
+    <!-- Links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="#about">Moi</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#skills">Compétences</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#experience">Expérience</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#education">Éducation</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#portfolio">Portfolio</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#recommandations">Recommandations</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#contact">Contact</a>
+      </li>
+      <li class="nav-item">
+        <div id="wrapper">
+          <div id="controle">
+
+            <svg onclick="back();" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20px" height="10px"
+              class=«rembobiner»>
+              <path fill-rule="evenodd" fill="#CBCDCF" d="M11.262,4.999 L19.998,0.001 L19.998,9.997 L11.262,4.999 ZM2.536,4.999 L11.262,0.001 L11.262,4.999 L11.262,9.997 L2.536,4.999 ZM-0.001,0.001 L2.536,0.001 L2.536,9.997 L-0.001,9.997 L-0.001,0.001 Z"
+              />
+            </svg>
+
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="9px" height="10px" class=«play»
+              id="changement" onclick="document.getElementById('player').play(); jouer();">
+              <path fill-rule="evenodd" fill="#CBCDCF" d="M-0.000,10.000 L9.004,4.998 L-0.000,-0.004 L-0.000,10.000 Z" />
+            </svg>
+
+            <svg onclick="forw();" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20px" height="10px"
+              class=«avancer»>
+              <path fill-rule="evenodd" fill="#CBCDCF" d="M17.464,9.999 L17.464,0.003 L20.001,0.003 L20.001,9.999 L17.464,9.999 ZM8.738,5.001 L8.738,0.003 L17.464,5.001 L8.738,9.999 L8.738,5.001 ZM0.002,0.003 L8.738,5.001 L0.002,9.999 L0.002,0.003 Z"
+              />
+            </svg>
+
+          </div>
+
+          <div id="progression">
+            <input id="seekbar" type="range" value="0" max="100" step="1" onclick="document.getElementById('player').play(); jouer();">
+            <progress value="0" max="100"></progress>
+          </div>
+
+          <audio id="player" onended="forw();" src="musique/Dragonball Super - Clash of Gods.mp3">
+          </audio>
+
+          <div id="control-volume">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="15px" height="12px" id="volume"
+              class="speaker-on" onclick="afficher();">
+              <path fill-rule="evenodd" fill="#CBCDCF" d="M12.871,12.000 C12.695,11.878 12.511,11.749 12.350,11.635 C14.871,7.866 14.856,4.127 12.357,0.357 C12.519,0.251 12.695,0.122 12.871,0.000 C15.665,3.298 15.753,8.588 12.871,12.000 ZM10.931,10.381 C10.754,10.260 10.571,10.138 10.402,10.024 C12.195,7.341 12.188,4.674 10.409,1.968 C10.571,1.862 10.754,1.733 10.938,1.611 C13.041,4.043 13.085,7.911 10.931,10.381 ZM8.454,8.421 C9.519,6.809 9.527,5.206 8.454,3.579 C8.534,3.519 8.623,3.458 8.711,3.397 C8.799,3.336 8.895,3.276 8.990,3.215 C10.240,4.491 10.512,7.098 8.998,8.785 C8.821,8.664 8.637,8.542 8.454,8.421 ZM3.881,8.094 C3.800,8.010 3.661,7.949 3.543,7.949 C2.448,7.942 1.345,7.942 0.250,7.942 C0.176,7.942 0.096,7.942 0.000,7.942 C0.000,6.635 0.000,5.365 0.000,4.066 C0.088,4.066 0.162,4.066 0.243,4.066 C1.331,4.066 2.426,4.058 3.514,4.073 C3.683,4.073 3.793,4.020 3.911,3.899 C5.035,2.728 6.160,1.573 7.285,0.403 C7.344,0.342 7.380,0.274 7.432,0.205 C7.446,0.213 7.461,0.228 7.476,0.236 C7.476,4.081 7.476,7.927 7.476,11.795 C7.402,11.726 7.344,11.673 7.292,11.612 C6.160,10.434 5.021,9.264 3.881,8.094 Z"
+              />
+            </svg>
+
+            <input id="vol-control" type="range" min="0" max="100" step="1" oninput="SetVolume(this.value)" onchange="SetVolume(this.value)"
+            />
+          </div>
+        </div>
+
+      </li>
+    </ul>
+  </nav>
+  <br>
+
+  <section id="about" class="container-fluid">
+    <div class="col-xs-8 col-md-4 profile-picture">
+      <img src="images/me.jpg" alt="profile-pic" class="img-thumbnail" />
+    </div>
+    <div class="heading">
+      <h1>Salut, c'est moi !</h1>
+      <h3>Étudiant à l'Université du Québec à Montréal</h3>
+      <a href="docs/CV.pdf" class="button1">Télécharger CV</a>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="blue-divider"></div>
+    <div class="heading">
+      <h2>Compétences</h2>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width:85%">
+              <h5>HTML 85%</h5>
+            </div>
+          </div>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width:80%">
+              <h5>CSS 80%</h5>
+            </div>
+          </div>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width:75%">
+              <h5>JavaScript 75%</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width:65%">
+              <h5>JQuery 65%</h5>
+            </div>
+          </div>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width:70%">
+              <h5>BootStrap 70%</h5>
+            </div>
+          </div>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width:80%">
+              <h5>SQL 80%</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <section id="experience">
+    <div class="container">
+      <div class="white-divider"></div>
+      <div class="heading">
+        <h2>Expérience Professionnelle</h2>
+      </div>
+      <ul class="timeline">
+        <li>
+          <div class="timeline-badge">
+            <i class="fa fa-briefcase" aria-hidden="true"></i>
+          </div>
+          <div class="timeline-panel-container">
+            <div class="timeline-panel">
+              <div class="timeline-heading">
+                <h3>GOOGLE</h3>
+                <h4>Lorem Ipsum</h4>
+                <p class="text-muted">
+                  <i class="fa fa-clock-o" aria-hidden="true"></i> 2013-2015</p>
+              </div>
+              <div class="timeline-body">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  <br> Etiam vitae consequat sem, ut mattis ligula.
+                  <br> Sed vitae tortor ex. Donec sed pharetra nisi</p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="timeline-badge">
+            <i class="fa fa-briefcase" aria-hidden="true"></i>
+          </div>
+          <div class="timeline-panel-container-inverted">
+            <div class="timeline-panel">
+              <div class="timeline-heading">
+                <h3>FACEBOOK</h3>
+                <h4>Lorem Ipsum</h4>
+                <p class="text-muted">
+                  <i class="fa fa-clock-o" aria-hidden="true"></i> 2010-2013</p>
+              </div>
+              <div class="timeline-body">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  <br> Etiam vitae consequat sem, ut mattis ligula.
+                  <br> Sed vitae tortor ex. Donec sed pharetra nisi</p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="timeline-badge">
+            <i class="fa fa-briefcase" aria-hidden="true"></i>
+          </div>
+          <div class="timeline-panel-container">
+            <div class="timeline-panel">
+              <div class="timeline-heading">
+                <h3>TWITTER</h3>
+                <h4>Lorem Ispum</h4>
+                <p class="text-muted">
+                  <i class="fa fa-clock-o" aria-hidden="true"></i> 2007-2010</p>
+              </div>
+              <div class="timeline-body">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  <br> Etiam vitae consequat sem, ut mattis ligula.
+                  <br> Sed vitae tortor ex. Donec sed pharetra nisi</p>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="education">
+    <div class="container">
+      <div class="blue-divider"></div>
+      <div class="heading">
+        <h2>Éducation</h2>
+      </div>
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="education-block">
+            <h5>2013 - 2016</h5>
+            <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+            <h3>Lycée Déodat de Severac</h3>
+            <h4>Diplôme de Baccalauréat Scientifiques</h4>
+            <div class="blue-divider"></div>
+            <p>Spécialité Informatique et Sciences du Numérique 
+              (<i>ISN</i> )
+            </p>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="education-block">
+            <h5>2016 - 2019</h5>
+            <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+            <h3>Université du Québec À Montréal</h3>
+            <h4>Diplôme de Licence en Informatique et Génie Logicial</h4>
+            <div class="blue-divider"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="portfolio">
+    <div class="container">
+      <div class="white-divider"></div>
+      <div class="heading">
+        <h2>Portfolio</h2>
+      </div>
+      <div class="row">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-2">
+          <a class="thumbnail" href="http://www.facebook.com" target="_blank">
+            <img src="images/facebook-share.png" alt="facebook share" />
+          </a>
+        </div>
+        <div class="col-sm-2">
+          <a class="thumbnail" href="http://www.google.com" target="_blank">
+            <img src="images/google-translate.png" alt="google translate" />
+          </a>
+        </div>
+        <div class="col-sm-2">
+          <a class="thumbnail" href="http://www.twitter.com" target="_blank">
+            <img src="images/twitter-video.png" alt="twitter video" />
+          </a>
+        </div>
+        <div class="col-sm-3"></div>
+      </div>
+      <div class="row">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-2">
+          <a class="thumbnail" href="http://www.facebook.com" target="_blank">
+            <img src="images/facebook-video.png" alt="facebook video" />
+          </a>
+        </div>
+        <div class="col-sm-2">
+          <a class="thumbnail" href="http://www.youtube.com" target="_blank">
+            <img src="images/youtube.png" alt="youtube" />
+          </a>
+        </div>
+        <div class="col-sm-2">
+          <a class="thumbnail" href="http://www.twitter.com" target="_blank">
+            <img src="images/twitter-retweet.png" alt="twitter retweet" />
+          </a>
+        </div>
+        <div class="col-sm-3"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="recommandations">
+    <div class="container">
+      <div class="blue-divider"></div>
+      <div class="heading">
+        <h2>Recommandations</h2>
+        <p id="item-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut a convallis ex. Donec at eleifend dui.</p>
+        <p id="item-2">Sed blandit, lacus in imperdiet vulputate, nisi ipsum vehicula metus, eleifend.</p>
+        <p id="item-3"> Nunc ultrices ante nec lorem scelerisque, et lobortis orci posuere.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <div class="white-divider"></div>
+      <div class="heading">
+        <h2>Contact</h2>
+      </div>
+      <div class="row">
+        <div class="col-lg-12 col-lg-offset-1">
+          <form id="contact-form" method="post" action="" role="form">
+            <div class="row">
+
+              <div class="col-md-6">
+                <label for="firstname">Prénom *</span>
+                </label>
+                <input type="text" id="firstname" name="firstname" required class="form-control" placeholder="Votre prénom" />
+                <p class="comments"></p>
+              </div>
+
+              <div class="col-md-6">
+                <label for="name">Nom *</span>
+                </label>
+                <input type="text" id="name" name="name" required class="form-control" placeholder="Votre nom" />
+                <p class="comments"></p>
+              </div>
+
+              <div class="col-md-6">
+                <label for="email">Email *</span>
+                </label>
+                <input type="email" id="email" name="email" required class="form-control" placeholder="Votre email" />
+                <p class="comments"></p>
+              </div>
+
+              <div class="col-md-6">
+                <label for="phone">Téléphone</label>
+                <input type="tel" id="phone" name="phone" class="form-control" placeholder="Votre numéro de téléphone" />
+                <p class="comments"></p>
+              </div>
+
+              <div class="col-md-12">
+                <label for="message">Message*</span>
+                </label>
+                <textarea id="message" name="message" required class="form-control" placeholder="Votre message" rows="4"></textarea>
+                <p class="comments"></p>
+              </div>
+
+              <div class="col-md-12">
+                <p class="blue">
+                  <strong>* Ces informations sont requises</strong>
+                </p>
+              </div>
+              <div class="col-md-12">
+                <input type="submit" class="button1" value="Envoyer" />
+              </div>
+
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="text-center">
+    <a href="#about">
+      <i class="fa fa-arrow-circle-o-up" aria-hidden="true"></i>
+    </a>
+    <h5>Copyright (c) 2017 Copyright Holder All Rights Reserved.</h5>
+  </footer>
+  <script src="js/audio-control.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+/* Dimensions de la div conetant le speaker et le curseur de contrôle audio */
+
+#control-volume {
+    width: 15px;
+    height: 50px;
+    margin-left: 13px;
+}
+
+/* Positionnement, dimensions et couleur de l'input contolant le volume */
+
+#vol-control {
+    position: absolute;
+    right: -5px;
+    top: 30px;
+    background: #CBCDCF;
+    width: 30px;
+    height: 3px;
+    -ms-transform: rotate(270deg);
+    /* IE 9 */
+    -webkit-transform: rotate(27deg);
+    /* Safari 3-8 */
+    transform: rotate(270deg);
+}
+
+#vol-control[type=range] {
+    -webkit-appearance: none;
+}
+
+/* Dimensions, forme et fond du 'rail' du curseur */
+
+#vol-control[type=range]::-webkit-slider-runnable-track {
+    width: 300px;
+    height: 5px;
+    background: transparent;
+    border: none;
+    border-radius: 3px;
+}
+
+/* Dimensions, forme et fond du curseur */
+
+#vol-control[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 5px;
+    width: 7px;
+    background: #6ACDFD;
+}
+
+#vol-control[type=range]:focus {
+    outline: none;
+}

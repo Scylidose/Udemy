@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Galerie d'images</title>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+
+    <!-- Google Kavivanar Font -->
+    <link href="https://fonts.googleapis.com/css?family=Kavivanar" rel="stylesheet">
+
+    <!-- Link to Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- My Style -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <!-- My Script -->
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <!-- Brand -->
+        <a class="navbar-brand" href="#">
+            <img src="images/icon.png">
+        </a>
+        <!-- Links -->
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="#about">Description</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#mine">Mes Photos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#other">Photos Internet</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#add" onclick="visibilite('add')">
+                    <i class="fa fa-plus-circle fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <br>
+
+    <div class="container">
+        <h1 id="about">No Man's Sky</h1>
+        <h2>Description</h2>
+        <p class="description">Le joueur incarne un pilote de vaisseau spatial traversant l'espace pour percer un mystère caché au centre de la
+            galaxie. Dans ce dernier, des milliards de milliards de mondes sont à visiter, chacun accueillant un écosystème
+            différent des autres. Le but premier étant d'atteindre le centre de la première galaxie dans laquelle le joueur
+            apparaît, il est crucial de récolter des ressources pour progresser, tout en ayant la possibilité de créer une
+            alliance avec certains groupes ou races présents dans le jeu.
+            <br> En tant que découvreur du monde, il est possible au joueur de lui donner un nom, ainsi qu'aux espèces qu'il
+            abrite. Mais plus on est proche de percer le mystère, plus la traversée est dangereuse, ce qui donne lieu à des
+            batailles spatiales.</p>
+        <h2 id="mine">Mes Photos</h2>
+        <h3>Cliquer sur les photos pour les agrandir</h3>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <img id="1" src="images/bw/me1.png" onclick="window.open('images/me1.png','_blank','toolbar=0, location=0, directories=0, status=0, scrollbars=0, resizable=0, copyhistory=0, menuBar=0, width='+960+', height='+540);"
+                    />
+                    <p>CRASH</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <img id="2" src="images/bw/me2.png" onclick="window.open('images/me2.png','_blank','toolbar=0, location=0, directories=0, status=0, scrollbars=0, resizable=0, copyhistory=0, menuBar=0, width='+960+', height='+540);"
+                    />
+                    <p>SPHERE</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <img id="3" src="images/bw/me3.png" onclick="window.open('images/me3.png','_blank','toolbar=0, location=0, directories=0, status=0, scrollbars=0, resizable=0, copyhistory=0, menuBar=0, width='+960+', height='+540);"
+                    />
+                    <p>FLY</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <img id="4" src="images/bw/me4.png" onclick="window.open('images/me4.png','_blank','toolbar=0, location=0, directories=0, status=0, scrollbars=0, resizable=0, copyhistory=0, menuBar=0, width='+960+', height='+540);"
+                    />
+                    <p>ALIGNMENT</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <img id="5" src="images/bw/me5.png" onclick="window.open('images/me5.png','_blank','toolbar=0, location=0, directories=0, status=0, scrollbars=0, resizable=0, copyhistory=0, menuBar=0, width='+960+', height='+540);"
+                    />
+                    <p>T-REX</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <img id="6" src="images/bw/me6.png" onclick="window.open('images/me6.png','_blank','toolbar=0, location=0, directories=0, status=0, scrollbars=0, resizable=0, copyhistory=0, menuBar=0, width='+960+', height='+540);"
+                    />
+                    <p>PREDATOR</p>
+                </div>
+            </div>
+        </div>
+
+        <h2 id="other">Photos Internet</h2>
+        <h3>Cliquer sur les photos pour les agrandir</h3>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <img id="1o" src="images/bw/oth1.png" onclick="window.open('images/oth1.png','_blank','toolbar=0, location=0, directories=0, status=0, scrollbars=0, resizable=0, copyhistory=0, menuBar=0, width='+960+', height='+540);"
+                    />
+                    <p>LAND
+                        <br>
+                        <small>Sean Murray</small>
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <img id="2o" src="images/bw/oth2.png" onclick="window.open('images/oth2.png','_blank','toolbar=0, location=0, directories=0, status=0, scrollbars=0, resizable=0, copyhistory=0, menuBar=0, width='+960+', height='+540);"
+                    />
+                    <p>LANDSCAPE
+                        <br>
+                        <small>unknown</small>
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <img id="3o" src="images/bw/oth3.png" onclick="window.open('images/oth3.png','_blank','toolbar=0, location=0, directories=0, status=0, scrollbars=0, resizable=0, copyhistory=0, menuBar=0, width='+960+', height='+540);"
+                    />
+                    <p>TREE
+                        <br>
+                        <small>Polygon</small>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <img id="4o" src="images/bw/oth4.png" onclick="window.open('images/oth4.png','_blank','toolbar=0, location=0, directories=0, status=0, scrollbars=0, resizable=0, copyhistory=0, menuBar=0, width='+960+', height='+540);"
+                    />
+                    <p>PORTAL
+                        <br>
+                        <small>Reddit</small>
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <img id="5o" src="images/bw/oth5.png" onclick="window.open('images/oth5.png','_blank','toolbar=0, location=0, directories=0, status=0, scrollbars=0, resizable=0, copyhistory=0, menuBar=0, width='+960+', height='+540);"
+                    />
+                    <p>CREATURE
+                        <br>
+                        <small>Reddit</small>
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <img id="6o" src="images/bw/oth6.png" onclick="window.open('images/oth6.png','_blank','toolbar=0, location=0, directories=0, status=0, scrollbars=0, resizable=0, copyhistory=0, menuBar=0, width='+960+', height='+540);"
+                    />
+                    <p>PROCESSION
+                        <br>
+                        <small>Sean Murray</small>
+                    </p>
+                </div>
+            </div>
+            <div id="myPhotos">
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <div id="add">
+                    <h2>Ajout d'une image</h3>
+                        <label>URL de votre image</label>
+                        <input id="url" type="text" name="url">
+                        <h2></h2>
+                        <button onclick="ajout()">Ajouter</button>
+                        <button onclick="visibilite('add')">Annuler</button>
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

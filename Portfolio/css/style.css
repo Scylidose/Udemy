@@ -1,0 +1,460 @@
+/* GENERAL */
+
+body {
+  font-family: "Lato", "sans-serif";
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+}
+
+img {
+  max-width: 90%;
+  height: auto;
+}
+
+section {
+  padding: 5px 0 40px 0;
+}
+
+section .heading {
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+section .heading h2 {
+  text-transform: uppercase;
+}
+
+.blue-divider, .white-divider {
+  width: 100px;
+  height: 2px;
+  margin: 0px auto 10px auto;
+}
+
+.blue-divider {
+  background: #66ccff;
+}
+
+.white-divider {
+  background: #fff;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+.button1 {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+  border: 1px solid #fff;
+  display: inline-block;
+  margin-top: 5px;
+  padding: 10px 50px;
+  border-radius: 3px;
+  transition: all 0.3s ease-in;
+  background: transparent;
+}
+
+.button1:hover {
+  background: white;
+  color: #66ccff;
+  text-decoration: none;
+}
+
+/* MENU */
+
+.navbar {
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+}
+
+/* ABOUT */
+
+#about {
+  padding-top: 50px;
+  background-image: linear-gradient( to bottom, white 30%, #66ccff);
+}
+
+.profile-picture {
+  text-align: center;
+  margin: 0 auto;
+  float: none;
+}
+
+#about .heading h1 {
+  color: #fff;
+  text-transform: uppercase;
+}
+
+#about .heading h3 {
+  color: #000;
+}
+
+/* SKILLS */
+
+#skills {
+  background: #333;
+}
+
+#skills .heading h2 {
+  color: #66ccff;
+}
+
+#skills .progress {
+  height: 5%;
+  margin: 30px 20px;
+  backface-visibility: #ddd;
+}
+
+#skills .progress-bar {
+  background: #66ccff;
+}
+
+#skills .progress-bar h5 {
+  text-shadow: 1px 1px 1px #000;
+}
+
+/* EXPERIENCE */
+
+#experience {
+  background: #66ccff;
+}
+
+#experience .heading h2 {
+  color: #fff;
+}
+
+.timeline {
+  padding: 30px 10px;
+  position: relative;
+}
+
+.timeline:before {
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  content: " ";
+  width: 5px;
+  background-color: #333;
+  left: 50%;
+  margin-left: -2.5px;
+}
+
+.timeline>li {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.timeline>li:after {
+  clear: both;
+}
+
+.timeline>li:before, .timeline>li:after {
+  content: " ";
+  display: table;
+}
+
+.timeline li .timeline-badge {
+  color: #66ccff;
+  width: 45px;
+  height: 40px;
+  line-height: 50px;
+  font-size: 20px;
+  text-align: center;
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  margin-left: -21px;
+  background-color: #ddd;
+  border-radius: 100%;
+}
+
+.timeline li i {
+  margin-top: 10px;
+  margin-bottom: 2px;
+}
+
+.timeline-panel-container {
+  width: 50%;
+  float: left;
+}
+
+.timeline-panel-container-inverted {
+  width: 50%;
+  float: right;
+}
+
+.timeline-panel {
+  width: 90%;
+  float: right;
+  margin-right: 40px;
+  border: 1px solid #d4d4d4;
+  border-radius: 7px;
+  padding: 20px 25px;
+  position: relative;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+  background: #fff;
+  bottom: 15px;
+}
+
+.timeline-panel-container-inverted .timeline-panel {
+  float: left;
+  margin-left: 40px;
+}
+
+.timeline-panel:after {
+  position: absolute;
+  top: 27px;
+  right: -14px;
+  display: inline-block;
+  border-top: 14px solid transparent;
+  border-left: 14px solid white;
+  border-right: 0 solid white;
+  border-bottom: 14px solid transparent;
+  content: " ";
+}
+
+.timeline-panel-container-inverted .timeline-panel:after {
+  border-left-width: 0;
+  border-right-width: 14px;
+  left: -14px;
+  right: auto;
+}
+
+.timeline-heading h3 {
+  margin-top: 5px;
+  font-size: 20px;
+}
+
+.timeline-heading h4 {
+  color: #66ccff;
+}
+
+/* EDUCATION */
+
+#education {
+  background: #333;
+}
+
+#education .heading h2 {
+  color: #66ccff;
+}
+
+.education-block {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 30px;
+  background: #ddd;
+  border-radius: 10px;
+  border: 2px solid #ccc;
+  margin-bottom: 20px;
+}
+
+.education-block h5 {
+  color: #888;
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+
+.education-block .fa {
+  font-size: 40px;
+}
+
+.education-block h3 {
+  color: #66ccff;
+}
+
+.education-block h4 {
+  margin-bottom: 20px;
+  color: #66ccff;
+}
+
+.education-block p {
+  font-weight: bold;
+}
+
+.education-block .blue-divider {
+  margin-bottom: 20px;
+}
+
+/* PORTFOLIO */
+
+#portfolio {
+  background: #66ccff;
+}
+
+#portfolio .heading h2 {
+  color: #fff;
+}
+
+#portfolio .thumbnail img {
+  width: 100%;
+  margin-bottom: 10px;
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+}
+
+#portfolio .thumbnail img:hover {
+  filter: none;
+  -webkit-filter: none;
+}
+
+/* RECOMMANDATIONS */
+
+#recommandations {
+  background: #333;
+  position: relative;
+}
+
+#recommandations .heading {
+  height: 200px;
+}
+
+#recommandations .heading h2 {
+  color: #66ccff;
+}
+
+#recommandations p {
+  text-align: center;
+  color: #fff;
+  display: block;
+  position: absolute;
+  left: 50%;
+  transform: translate(-20%, 0);
+  font-size: 2em;
+  animation-duration: 20s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+#item-1 {
+  animation-name: anim-1;
+}
+
+#item-2 {
+  animation-name: anim-2;
+}
+
+#item-3 {
+  animation-name: anim-3;
+}
+
+@keyframes anim-1 {
+  0%, 8.3% {
+    left: -100%;
+    opacity: 0;
+  }
+  8.3%, 25% {
+    left: 25%;
+    opacity: 1;
+  }
+  33.33%, 100% {
+    left: 110%;
+    opacity: 0;
+  }
+}
+
+@keyframes anim-2 {
+  0%, 33.33% {
+    left: -100%;
+    opacity: 0;
+  }
+  41.63%, 58.29% {
+    left: 25%;
+    opacity: 1;
+  }
+  66.66%, 100% {
+    left: 110%;
+    opacity: 0;
+  }
+}
+
+@keyframes anim-3 {
+  0%, 66.66% {
+    left: -100%;
+    opacity: 0;
+  }
+  74.96%, 91.62% {
+    left: 25%;
+    opacity: 1;
+  }
+  100% {
+    left: 110%;
+    opacity: 0;
+  }
+}
+
+/* FOOTER */
+
+footer {
+  background: #333;
+  padding: 20px 0 40px;
+}
+
+footer .fa {
+  font-size: 25px;
+  margin: 20px;
+  color: #66ccff;
+  height: 30px;
+}
+
+footer .fa:hover {
+  font-size: 27px;
+}
+
+footer h5 {
+  color: #fff;
+  font-weight: normal;
+}
+
+/* CONTACT */
+
+#contact {
+  background: #6cf;
+}
+
+#contact .heading .h2 {
+  color: #fff;
+}
+
+.heading {
+  text-align: center;
+}
+
+h2 {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #fff;
+}
+
+#contact-form {
+  font-style: 20px;
+  color: #fff;
+}
+
+.form-control {
+  height: 50px;
+  font-size: 18px;
+}
+
+.comment {
+  font-style: italic;
+  font-style: 18px;
+  color: #fff;
+  height: 25px;
+}
+
+#contact-form input[type=submit] {
+  margin: 40px auto 0px;
+  display: block;
+}
+
+.thank-you {
+  text-align: center;
+  margin-top: 15px;
+  font-weight: bold;
+}
